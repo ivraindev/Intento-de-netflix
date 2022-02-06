@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px;
+        background: cornflowerblue;
+    }
+    .carrusel {
+        width: 100%;
+        padding: 0px;
+        position:relative;
+        display: flex;
+        justify-content: center;
+    }
+    .carrusel__container {
+        white-space: nowrap;
+        margin: 70px 20px;
+        padding-bottom: 10px;
+    }
+    .carrusel-item {
+        background-color: magenta;
+        width: 200px;
+        height: 250px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 1000ms all;
+        transform-origin: center left;
+        position: relative;
+    }
+    .carrusel-item:hover ~ .carrusel-item {
+        transform:translate3d(100px, 0, 0);
+    }
+    .carrusel__container:hover .carrusel-item{
+        opacity: .3;
+    }
+    .carrusel__container:hover .carrusel-item:hover{
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    .carrusel-item__img {
+        width: 200px;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carrusel-item__details { 
+        background: linear-gradient(to top, rgba(0, 0, 0,) 100%);
+        font-size: 18px;
+        opacity: 1;
+        transition: 450ms opacity;
+        padding: 15px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+   }
+   .carrusel-item__details--title {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       color: white;
+       margin: 0px;
+       padding: 0px;
+   }
+   .carrusel-item__details--subtitle {
+       font-family: Verdana, Geneva, Tahoma, sans-serif;
+       font-size: 10px;
+       color: white;
+       margin: 0px;
+       padding: 0px;
+   }
+   .carrusel-item__details img{
+       height: 30px;
+    }
+
+</style>
+<body>
+    <section class="carrusel">
+        <div class="carrusel__container">
+          <div class="carrusel-item">
+            <img class="carrusel-item__img" src="https://images.pexels.com/photos/7094728/pexels-photo-7094728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="chica">
+            <div class="carrusel-item__details">
+                    <div>
+                        <img src="https://img.icons8.com/flat-round/50/000000/play--v1.png" alt="play">
+                        <img src="https://img.icons8.com/pastel-glyph/64/000000/plus--v1.png" alt="mas">
+                    </div>
+                    <p class="carrusel-item__details--title">Fotografía</p>
+                    <p class="carrusel-item__details--subtitle">2019,16+ 114 min.</p>
+                </div>
+            </div>
+        <div class="carrusel-item">
+            </div>
+        <div class="carrusel-item">
+            </div>
+        <div class="carrusel-item">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
